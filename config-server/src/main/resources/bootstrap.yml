@@ -1,25 +1,31 @@
 server:
   port: 8888
 spring:
+  profiles:
+    active: git
   cloud:
     config:
       server:
         bootstrap: true
         git:
           uri: https://github.com/ajitkadari/spring-cloud-config-example.git
+          force-pull: true
           repos:
             red:
-              uri: https://github.com/ajitkadari/red-repo
               pattern:
                 - '*/red'
+              uri: https://github.com/ajitkadari/red-repo
               cloneOnStart: true
+              force-pull: true
             green:
-              uri: https://github.com/ajitkadari/green-repo
               pattern:
                 - '*/green'
+              uri: https://github.com/ajitkadari/green-repo
               cloneOnStart: true
+              force-pull: true
             blue:
-              uri: https://github.com/ajitkadari/blue-repo
               pattern:
                 - '*/blue'
+              uri: https://github.com/ajitkadari/blue-repo
               cloneOnStart: true
+              force-pull: true
