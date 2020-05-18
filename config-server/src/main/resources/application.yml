@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: configserver
+  security:
+    user:
+      name: admin
+      password: configserver

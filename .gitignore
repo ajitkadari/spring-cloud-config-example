@@ -1,0 +1,14 @@
+/config-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/config-server/target/maven-archiver/pom.properties
+/config-server/target/config-server-1.0-SNAPSHOT.jar
+/config-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/.idea
+/config-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/config-server/target/classes/application.yml
+/config-server/target/classes/bootstrap.yml
+/config-server/target/classes/org/example/spring/config/server/ConfigServerApplication.class
+/config-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+/config-client/target/classes/application.yml
+/config-client/target/classes/bootstrap.yml
+/config-server/target/config-server-1.0-SNAPSHOT.jar.original
+/config-client/target/classes/org/example/spring/config/client/ConfigClientApplication.class
