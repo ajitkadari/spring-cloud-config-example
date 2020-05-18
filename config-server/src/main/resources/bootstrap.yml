@@ -7,9 +7,19 @@ spring:
         bootstrap: true
         git:
           uri: https://github.com/ajitkadari/spring-cloud-config-example.git
-          username: something
-          password: something
           repos:
-            red: https://github.com/ajitkadari/red-repo
-            green: https://github.com/ajitkadari/green-repo
-            blue: https://github.com/ajitkadari/blue-repo
+            red:
+              uri: https://github.com/ajitkadari/red-repo
+              pattern:
+                - '*/red'
+              cloneOnStart: true
+            green:
+              uri: https://github.com/ajitkadari/green-repo
+              pattern:
+                - '*/green'
+              cloneOnStart: true
+            blue:
+              uri: https://github.com/ajitkadari/blue-repo
+              pattern:
+                - '*/blue'
+              cloneOnStart: true
