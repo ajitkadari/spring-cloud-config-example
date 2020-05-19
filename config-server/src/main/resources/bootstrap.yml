@@ -1,31 +1,29 @@
-server:
-  port: 8888
 spring:
+  config:
+    name: configserver
+  security:
+    user:
+      name: admin
+      password: configserver
   profiles:
-    active: git
+    active: composite
   cloud:
     config:
       server:
+        composite:
+          - type: git
+            uri: https://github.com/ajitkadari/red-repo
+            searchPaths: config-properties
+            pattern: '*/application-*'
+            cloneOnStart: true
+          - type: git
+            uri: https://github.com/ajitkadari/green-repo
+            searchPaths: config-properties
+            pattern: '*/application-*'
+            cloneOnStart: true
+          - type: git
+            uri: https://github.com/ajitkadari/blue-repo
+            searchPaths: config-properties
+            pattern: '*/application-*'
+            cloneOnStart: true
         bootstrap: true
-        git:
-          uri: https://github.com/ajitkadari/spring-cloud-config-example.git
-          force-pull: true
-          repos:
-            red:
-              pattern:
-                - '*/red'
-              uri: https://github.com/ajitkadari/red-repo
-              cloneOnStart: true
-              force-pull: true
-            green:
-              pattern:
-                - '*/green'
-              uri: https://github.com/ajitkadari/green-repo
-              cloneOnStart: true
-              force-pull: true
-            blue:
-              pattern:
-                - '*/blue'
-              uri: https://github.com/ajitkadari/blue-repo
-              cloneOnStart: true
-              force-pull: true
