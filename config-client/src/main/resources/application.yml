@@ -1,7 +1,3 @@
 spring:
   application:
     name: configclient
-  security:
-    user:
-      name: admin
-      password: configclient

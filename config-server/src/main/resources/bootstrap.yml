@@ -1,12 +1,8 @@
 spring:
   config:
     name: configserver
-  security:
-    user:
-      name: admin
-      password: configserver
   profiles:
-    active: composite
+    active: composite, red, blue, green
   cloud:
     config:
       server:
