@@ -12,3 +12,4 @@
 /config-client/target/classes/bootstrap.yml
 /config-server/target/config-server-1.0-SNAPSHOT.jar.original
 /config-client/target/classes/org/example/spring/config/client/ConfigClientApplication.class
+/config-client/target
